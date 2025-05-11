@@ -1,0 +1,234 @@
+:root {
+  --primary: #6a40ee;
+  --secondary: #ff5a5f;
+  --accent: #00c8aa;
+  --dark: #2d3436;
+  --light: #ffffff;
+  --gray-bg: #f8f9fa;
+  --shadow: rgba(0, 0, 0, 0.1);
+
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  
+
+  --radius: 8px;
+  --transition: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--dark);
+  line-height: 1.6;
+  background-color: var(--light);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+h1, h2 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: var(--space-sm);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: var(--space-md);
+}
+
+p {
+  margin-bottom: var(--space-sm);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+
+.banner {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: var(--light);
+  padding: var(--space-lg) var(--space-sm);
+  text-align: center;
+}
+
+.banner-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--space-md);
+}
+
+.logo {
+  margin-bottom: var(--space-md);
+}
+
+.logo img {
+  max-width: 180px;
+  margin: 0 auto;
+}
+
+.banner p {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-md);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner button {
+  background-color: var(--secondary);
+  color: var(--light);
+  border: none;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.banner button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+
+#course-content {
+  padding: var(--space-lg) var(--space-sm);
+  text-align: center;
+  background-color: var(--light);
+}
+
+#course-content p {
+  max-width: 800px;
+  margin: 0 auto var(--space-md);
+}
+
+.modules-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-width: 800px;
+  margin: var(--space-md) auto;
+}
+
+.module {
+  background-color: var(--gray-bg);
+  padding: var(--space-md);
+  border-radius: var(--radius);
+  text-align: left;
+  box-shadow: 0 2px 6px var(--shadow);
+  transition: transform var(--transition);
+}
+
+.module:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px var(--shadow);
+}
+
+.module span {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+#transform-world {
+  background-color: var(--secondary);
+  color: var(--light);
+  text-align: center;
+  padding: var(--space-lg) var(--space-sm);
+}
+
+#transform-world p {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+#professional-challenges {
+  padding: var(--space-lg) var(--space-sm);
+  text-align: center;
+  background-color: var(--light);
+}
+
+#professional-challenges img {
+  max-width: 600px;
+  border-radius: var(--radius);
+  margin: var(--space-md) auto;
+  box-shadow: 0 8px 20px var(--shadow);
+}
+
+#professional-challenges p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: var(--primary);
+  color: var(--light);
+  text-align: center;
+  padding: var(--space-md);
+}
+
+.dio-logo {
+  max-width: 150px;
+  margin: 0 auto var(--space-sm);
+}
+
+footer a {
+  color: var(--light);
+  font-weight: bold;
+  position: relative;
+}
+
+footer a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--accent);
+  transform: scaleX(0);
+  transition: transform var(--transition);
+}
+
+footer a:hover::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+  .module {
+    padding: var(--space-sm);
+  }
+  
+  #professional-challenges img {
+    margin: var(--space-sm) auto;
+  }
+}
